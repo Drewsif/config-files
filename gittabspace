@@ -1,0 +1,4 @@
+#!/bin/bash
+echo \*.py  filter=tabspace4 >> .git/info/attributes
+git config filter.tabspace4.smudge 'unexpand --tabs=4 --first-only'
+git config filter.tabspace4.clean 'expand --tabs=4 --initial'
